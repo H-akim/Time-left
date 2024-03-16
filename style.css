@@ -1,0 +1,130 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins' , sans-serif;
+}
+.container{
+    width: 100vw;
+    height: 100vh;
+    background-image: url(images/background.png);
+    background-size: cover;
+    background-position: center;
+    padding: 0px 8%;
+}
+.logo{
+    width: 120px;
+    padding: 20px 0px;
+    cursor: pointer;
+}
+.content{
+    width: 90%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+    text-transform: capitalize;
+}
+.content h1{
+    font-size: 70px;
+    font-weight: 500;
+}
+.content h1 span{
+    color: #ff3753;
+}
+.content button{
+    text-transform: capitalize;
+    background: transparent;
+    border: 2px solid #fff;
+    outline: none;
+    padding: 12px 25px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+    cursor: pointer;
+}
+.content button img{
+    width: 15px;
+    margin-left: 10px;
+}
+.launch_time{
+    display: flex;
+}
+.launch_time div{
+    flex-basis: 100px;
+    text-align: center;
+}
+.launch_time div:nth-child(1){
+    margin-right: 10px;
+}
+.launch_time div:nth-child(2){
+    margin-right: 10px;
+}
+.launch_time div p{
+    font-size: 60px;
+    margin-bottom: 5px;
+}
+.rocket{
+    width: 250px;
+    position: absolute;
+    right: 10%;
+    bottom: 0;
+    animation: rocket 4s linear infinite;
+}
+@keyframes rocket{
+    0%{
+        bottom: 0;
+        opacity: 0;
+    }
+    100%{
+        bottom: 100%;
+        opacity: 1;
+    }
+}
+
+
+
+/*  media screen  */
+
+
+@media (max-width: 490px){
+    .container{
+        padding: 0px;
+    }
+    
+    .logo{
+        display: flex;
+        align-items: center;
+        margin:  auto 30px;
+        width: 200px;
+    }
+    .content{
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .content h1{
+        font-size: 50px;
+        text-align: center;
+        line-height: 1;
+        margin-bottom: 20px;
+        margin-top: 50px;
+    }
+    .launch_time{
+        display: flex;
+        flex-direction: column;
+    }
+    .first_p{
+        display: none;
+    }
+    .launch_time div{
+        flex-basis: 50px;
+        text-align: center;
+    }
+    .launch_time div p{
+        font-size: 30px;
+    }
+    .content button{
+        margin:30px auto;
+    }
+}
